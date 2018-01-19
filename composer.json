@@ -1,0 +1,20 @@
+{
+    "name": "evondu/yii2-metronic",
+    "description": "yii2-metronic components",
+    "authors": [
+        {
+            "name": "EvonDu",
+            "email": "298550274@qq.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "evondu\\metronic\\": "src"
+        }
+    },
+    "license": "MIT",
+    "minimum-stability": "dev"
+}
