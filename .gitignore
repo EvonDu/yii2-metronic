@@ -7,3 +7,5 @@ themes/classic/views/
 
 /vendor/
 /.idea/
+/src/assets/*
+!/src/assets/other/

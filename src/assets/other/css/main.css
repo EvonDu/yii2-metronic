@@ -1,0 +1,11 @@
+.breadcrumb > li + li::before {
+    content: "/";
+}
+
+.page-header.navbar .page-logo>.logo-image, .page-header.navbar .page-logo>a{
+    line-height: 46px;
+}
+
+.page-header.navbar .page-logo .logo-default{
+    margin:0px;
+}
