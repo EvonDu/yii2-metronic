@@ -4,15 +4,30 @@ namespace evondu\metronic\widgets;
 use yii\helpers\Html;
 
 /*
-use metronic\widgets\Button
-<?= metronic\widgets\Button::widget([
-    'tag'=>Button::TYPE_A,
+use evondu\metronic\widgets\Button
+<?= Button::widget([
+    // tag类型，支持a、submit、button(默认)
+    'tag'=>Button::TAG_A,
+    // tag为TAG_A时，的url地址
     'url'=>['create'],
     'text'=>'SUCCESS',
     'icon'=>'fa fa-plus',
     'color'=>Button::COLOR_GREEN,
-    'size'=>Button::SIZE_NORMAL
-    'sbold'=> true
+    'size'=>Button::SIZE_NORMAL,
+    // 是否加粗
+    'sbold'=>true,
+    // 是否使用描边样式
+    'outline'=>false,
+    // 是否可用
+    'disabled'=>true,
+    // 是否使用圆角
+    'circle'=>false,
+    // 是否为icon按钮
+    'iconOnly'=>false,
+    // 是否使用Bootstrap样式
+    'bootstrap'=>false,
+    // Bootstrap样式时生效，用于指定类型：info、danger、primary、warning、success
+    'type'=>Button::TYPE_PRIMARY
 ])?>
  */
 class Button extends MetronicWidget

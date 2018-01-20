@@ -5,18 +5,31 @@ use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
 
 /*
-use metronic\widgets\Portlet;
+use evondu\metronic\widgets\Portlet;
 <?php Portlet::begin([
+    // 窗口类型：
+    // TYPE_BOXED：盒型
+    // TYPE_LIGHT：线条型，默认
     "type"=>Portlet::TYPE_LIGHT,
+    // 窗口颜色，盒型时生效
+    "Color"=>Portlet::COLOR_BLUE
+    // 标题文字颜色，线条型时生效
     "fontColor"=>Portlet::COLOR_DARK,
     "title"=>$this->title,
-    "helper"=>"信息",
+    // 标题旁的帮助信息，只在线条型时生效
+    "helper"=>"标题帮助信息",
     "icon"=>'icon-user',
+    // 12删栏中占的删栏数
     "col"=>12,
+    // 标题是否加粗
     "bold"=>true,
+    // 是否显示边框，只在线条型时生效
     "bordered"=>true,
+    // 是否显示工具条
     "showTools"=>false,
+    // 是否显示全屏按钮
     "showFullscreen"=>true,
+    // 动作条按钮配置，可用配置/内容两种方式设置
     'actions'=> [
         Html::button("Edit",["class"=>"btn btn-circle btn-default"]),
         ["url"=>['infoupdate', 'id' => $model->user_id], "icon"=>'icon-pencil']

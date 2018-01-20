@@ -5,20 +5,25 @@ use yii\helpers\Html;
 use evondu\metronic\Select2Asset;
 
 /*
-<?= $form->field($model,"username")->select2([
-    "CA"=>"California",
-    "NV"=>"Nevada",
-    "OR"=>"Oregon",
-    "WA"=>"Washington",
-    "Mountain Time Zone"=>[
-        "AZ"=>"Arizona",
-        "CO"=>"Colorado",
-        "ID"=>"Idaho",
+<?= $form->field($model,"username")->select2(
+    //下拉框的选项，支持二级
+    [
+        "CA"=>"California",
+        "NV"=>"Nevada",
+        "OR"=>"Oregon",
+        "WA"=>"Washington",
+        "Mountain Time Zone"=>[
+            "AZ"=>"Arizona",
+            "CO"=>"Colorado",
+            "ID"=>"Idaho",
+        ]
+    ],
+    //配置项
+    [
+        //是否多选
+        "multiple" => false
     ]
-    ],[
-        "multiple" => true
-        "selectOptions"=>[]
-])?>
+)?>
  */
 class Select2 extends MetronicInputWidget
 {

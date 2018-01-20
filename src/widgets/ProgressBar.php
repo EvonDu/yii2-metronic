@@ -2,12 +2,22 @@
 namespace evondu\metronic\widgets;
 
 use yii\helpers\Html;
+
 /*
-use metronic\widgets\ProgressBar
+use evondu\metronic\widgets\ProgressBar
 <?= ProgressBar::widget([
+    // 进度值：1-100
     'value'=>20,
+    // 显示样式：
+    // THEME_BASIC：默认样式
+    // THEME_STRIPED：条纹样式
+    // TYPE_ANIMATED：带动画条纹样式
     'theme'=>ProgressBar::TYPE_ANIMATED
+    // 类型：info、danger、primary、success、warning
     'class'=>ProgressBar::CLASS_SUCCESS,
+    // 是否显示文字进度
+    'showText'=>true
+    // 是否存在下部外边距
     'marginBottom'=>true
 ])?>
  */

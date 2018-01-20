@@ -5,20 +5,30 @@ use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
 
 /*
-use metronic\widgets\Step;
+use evondu\metronic\widgets\Step;
 <?= Step::widget([
+    // Step 类型（显示样式）
+    // 1、TYPE_LINE：线型，默认
+    // 2、TYPE_DEFAULT、TYPE_BACKGROUND、TYPE_NO_BACKGROUND：普通型，分无背景和黑背景
+    // 3、TYPE_THIN、TYPE_BACKGROUND_THIN、TYPE_NO_BACKGROUND_THIN：细条型，分无背景和黑背景
     'type'=>Step::TYPE_LINE,
+    // 每个步骤的配置，Status的取值：
+    // STATUS_ACTIVE：正在进行的步骤
+    // STATUS_DONE：已经完成的步骤
+    // STATUS_ERROR：错误的步骤
     'items'=>[
         ['title'=>'Step1','content'=>'step1','status'=>Step::STATUS_ACTIVE],
-        ['title'=>'Step2','content'=>'step2'],
+        ['title'=>'Step2','content'=>'step2','status'=>Step::STATUS_ACTIVE],
         ['title'=>'Step3','content'=>'step3']],
+    // 是否使用黑色背景
     'bgDark'=>false,
+    // 步骤描述配置，可忽略
     'desc'=>[
         'title'=>'Title',
         'content'=>'desc content'
     ]
 ])?>
- */
+*/
 class Step extends MetronicWidget
 {
     //TYPE

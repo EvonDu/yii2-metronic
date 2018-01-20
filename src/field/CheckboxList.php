@@ -3,6 +3,24 @@ namespace evondu\metronic\field;
 
 use yii\helpers\Html;
 
+/*
+use evondu\metronic\field\CheckboxList;
+<?= $form->field($model,"roles")->checkboxList(
+    //选项
+    [
+        "CA"=>"California",
+        "NV"=>"Nevada",
+        "OR"=>"Oregon",
+    ],
+    //配置
+    [
+        // 类型：
+        // TYPE_LIST：列显示
+        // TYPE_INLINE：行显示
+        'type'=>CheckboxList:TYPE_LIST
+    ]
+)?>
+ */
 class CheckboxList extends MetronicInputWidget
 {
     //Type

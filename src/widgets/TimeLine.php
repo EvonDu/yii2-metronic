@@ -5,15 +5,19 @@ use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
 
 /*
+use evondu\metronic\widgets\TimeLine;
 <?= TimeLine::widget([
     'items' => [
         [
+            //项icon，当存在images时会覆盖掉icon
             'icon'=>"icon-docs",
             'image'=>"",
             'title'=>"Title",
             'time'=>"2018-18-18 11:11:11",
             'content'=>"Content",
-            'type'=>"blue",
+            //颜色类型，有：TYPE_M_BLUE、TYPE_M_GREEN、TYPE_M_RED
+            'type'=>TimeLine::TYPE_M_BLUE,
+            //下拉按钮的设置
             'actionsOptions'=>[
                 'content'=>'Actions',
                 'class'=>'btn-circle blue',
@@ -23,6 +27,8 @@ use yii\helpers\ArrayHelper;
             ],
         ]
     ],
+    //是否使用白色背景
+    'whiteBg' => 'false'
 ]);
  */
 class TimeLine extends MetronicWidget

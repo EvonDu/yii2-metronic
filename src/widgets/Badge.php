@@ -4,13 +4,16 @@ namespace evondu\metronic\widgets;
 use yii\helpers\Html;
 
 /*
-use metronic\widgets\Badge
+use evondu\metronic\widgets\Badge
 <?= Badge::widget([
-        'text'=>'SUCCESS',
-        'class'=>Badge::TYPE_SUCCESS,
-        'label'=>false,
-        'round'=>false
-    ])?>
+    'text'=>'SUCCESS',
+    // 类型：info、danger、primary、warning、success
+    'class'=>Badge::TYPE_SUCCESS,
+    // 是否为label型
+    'label'=>false,
+    // 是否使用方形
+    'round'=>false
+])?>
  */
 class Badge extends MetronicWidget
 {

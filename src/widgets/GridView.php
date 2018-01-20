@@ -3,6 +3,19 @@ namespace evondu\metronic\widgets;
 
 use yii\helpers\Html;
 
+/*
+use evondu\metronic\widgets\GridView
+<?= GridView::widget([
+    'dataProvider' => $dataProvider,
+    'filterModel' => $searchModel,
+    'columns' => [
+        ['class' => 'yii\grid\SerialColumn'],
+        'id',
+        'name',
+        ['class' => 'evondu\metronic\widgets\ActionColumn'],
+    ],
+]); ?>
+ */
 class GridView extends \yii\grid\GridView
 {
     public $tableOptions = [

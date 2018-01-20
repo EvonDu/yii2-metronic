@@ -5,12 +5,17 @@ use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
 
 /*
-use metronic\widgets\ActiveForm
+use evondu\metronic\widgets\ActiveForm
 <?php $form = ActiveForm::begin([
+    // 布局类型，参考Bootstrap：TYPE_HORIZONTAL、TYPE_VERTICAL、TYPE_INLINE
     "type"=>ActiveForm::TYPE_INLINE,
+    // Separated风格：项分割线
     "separated"=>false,
+    // Stripped风格：颜色相间
     "stripped"=>true,
+    // Bordered风格：网格型
     "bordered"=>true,
+    // 表单操作栏设置，即提交按钮等
     'buttons' => [
         Html::submit("Save",['class'=>'btn']),
         Html::button("Back",['class'=>'btn']),

@@ -7,12 +7,15 @@ use evondu\metronic\widgets\Button;
 
 /*
 <?= $form->field($model,"username")->datePicker([
+    // 时间格式
     "format" => "yyyy-mm-dd",
     "readonly "=>false,
+    // 是否为建议样式，即不是InputGroup
     "simple"=>false,
+    // 为InputGroup时的样式配置
     "buttonOptions" => [
         "icon"=>"fa fa-calendar",
-        "color"=>\metronic\widgets\Button::COLOR_DEFAULT
+        "color"=>\evondu\metronic\widgets\Button::COLOR_DEFAULT
     ]
 ])?>
  */

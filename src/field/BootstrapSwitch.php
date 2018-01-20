@@ -5,11 +5,16 @@ use yii\helpers\Html;
 use evondu\metronic\SwitchAsset;
 
 /*
+use evondu\metronic\field\BootstrapSwitch;
 <?= $form->field($model,"username")->bootstrapSwitch([
-    "onColor"=>\metronic\field\BootstrapSwitch::CLASS_PRIMARY,
-    "offColor"=>\metronic\field\BootstrapSwitch::CLASS_DEFAULT,
-    "size"=>\metronic\field\BootstrapSwitch::SIZE_NORMAL,
+    // 按钮颜色设置
+    "onColor"=>BootstrapSwitch::CLASS_PRIMARY,
+    "offColor"=>BootstrapSwitch::CLASS_DEFAULT,
+    // 设置大小
+    "size"=>BootstrapSwitch::SIZE_NORMAL,
+    // 是否可输入
     "readonly"=>false,
+    // 按钮内容设置
     "onText"=>"ON",
     "offText"=>"OFF"
 ])?>
