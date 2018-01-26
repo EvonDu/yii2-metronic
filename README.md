@@ -186,6 +186,17 @@ Switch滑动开关组件：
 <?php ActiveForm::end([]); ?>
 ```
 
+##### 2.5、other
+用于支持其他自定义的widget作为表单组件，需要设置对应的Widget类名和其配置（配置中已隐含了models和attribute），使用例子
+```
+<?= $form->field($model, 'photo')->other('common\widgets\fileinput\ImageInput', [
+    //外部widgets的配置(已经隐含了models和attribute)
+    'template'=>'{input}',
+    'uploadPath'=>yii\helpers\Url::to(['/helpers/file/upload-base64']),
+    'uploadType'=>'base64'
+]) ?>
+```
+
 #### 3、Portlet（窗口）
 窗口部件，使用前需要先导入`evondu\metronic\widgets\Portlet`，使用例子：
 ```

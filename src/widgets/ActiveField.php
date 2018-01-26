@@ -1,15 +1,32 @@
 <?php
 namespace evondu\metronic\widgets;
 
-use yii\helpers\ArrayHelper;
-use yii\helpers\Html;
 use evondu\metronic\field\CheckboxList;
 use evondu\metronic\field\DatePicker;
 use evondu\metronic\field\BootstrapSwitch;
 use evondu\metronic\field\Select2;
 use evondu\metronic\field\TagsInput;
+use evondu\metronic\field\Other;
+use yii\helpers\ArrayHelper;
+use yii\helpers\Html;
 
 class ActiveField extends \yii\widgets\ActiveField {
+    /**
+     * @param $widget
+     * @param array $options
+     * @return $this
+     */
+    public function other($widget,$options = []){
+        $otherOptions = [
+            'widget'=>$widget ,
+            'model' => $this->model,
+            'attribute' => $this->attribute,
+            'options'=>$options
+        ];
+        $this->parts['{input}'] = Other::widget($otherOptions);
+        return $this;
+    }
+
     /**
      * @param array $items
      * @param array $options
