@@ -197,6 +197,33 @@ Switch滑动开关组件：
 ]) ?>
 ```
 
+##### 2.6、checkboxTree
+树型的CheckboxList选择：
+```
+<?= $form->field($model, 'editAreas')->checkboxTree(
+    //数据选项
+    [
+        [ "id" => "ajson1", "parent" => "#", "text" => "Simple root node" ,"data"=>"11" ,"icon"=>"fa fa-briefcase icon-state-success"],
+        [ "id" => "ajson2", "parent" => "#", "text" => "Root node 2" ,"data"=>"12"],
+        [ "id" => "ajson3", "parent" => "ajson1", "text" => "Child 1" ,"data"=>"13"],
+        [ "id" => "ajson4", "parent" => "ajson1", "text" => "Child 2" ,"data"=>"14"],
+    ],
+    //配置信息
+    [
+        //选填，可以自动生成
+        "id"=>"tree",
+        //配置input的name属性
+        "checkboxName"=>'tree',
+        //是否为wholerow样式
+        "wholerow" => false,
+        //是否关联父级子级选择，即勾选父级自动勾选所有子级
+        "threeState" => true,
+        //是否选择后的显示背景颜色
+        "keepSelectedStyle" => true,
+    ])
+?>
+```
+
 #### 3、Portlet（窗口）
 窗口部件，使用前需要先导入`evondu\metronic\widgets\Portlet`，使用例子：
 ```
@@ -352,4 +379,30 @@ echo 'Body portlet';
     //是否使用白色背景
     'whiteBg' => 'false'
 ]);
+```
+
+#### 9、TreeView（树）
+树部件，使用前需要导入`evondu\metronic\widgets\TreeView`，使用例子：
+```
+<?= TreeView::widget([
+    //选填，可以自动生成
+    "id"=>"tree",
+    //是否有checkbox
+    "checkbox"=>false,
+    //有checkbox时生效，配置input的name属性
+    "checkboxName"=>'tree',
+    //是否为wholerow样式
+    "wholerow" => false,
+    //是否关联父级子级选择，即勾选父级自动勾选所有子级
+    "threeState" => true,
+    //是否选择后的显示背景颜色
+    "keepSelectedStyle" => true,
+    //数据选项
+    "items"=>[
+        [ "id" => "ajson1", "parent" => "#", "text" => "Simple root node" ,"data"=>"11" ,"icon"=>"fa fa-briefcase icon-state-success"],
+        [ "id" => "ajson2", "parent" => "#", "text" => "Root node 2" ,"data"=>"12"],
+        [ "id" => "ajson3", "parent" => "ajson1", "text" => "Child 1" ,"data"=>"13"],
+        [ "id" => "ajson4", "parent" => "ajson1", "text" => "Child 2" ,"data"=>"14"],
+    ]
+])?>
 ```

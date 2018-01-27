@@ -1,7 +1,8 @@
 <?php
-namespace evondu\metronic\widgets;
+namespace metronic\widgets;
 
 use evondu\metronic\field\CheckboxList;
+use evondu\metronic\field\CheckboxTree;
 use evondu\metronic\field\DatePicker;
 use evondu\metronic\field\BootstrapSwitch;
 use evondu\metronic\field\Select2;
@@ -24,18 +25,6 @@ class ActiveField extends \yii\widgets\ActiveField {
             'options'=>$options
         ];
         $this->parts['{input}'] = Other::widget($otherOptions);
-        return $this;
-    }
-
-    /**
-     * @param array $items
-     * @param array $options
-     * @return $this
-     */
-    public function checkboxList($items, $options = [])
-    {
-        $options = array_merge($options, ['items'=>$items,'model' => $this->model, 'attribute' => $this->attribute]);
-        $this->parts['{input}'] = CheckboxList::widget($options);
         return $this;
     }
 
@@ -77,6 +66,34 @@ class ActiveField extends \yii\widgets\ActiveField {
     public function tagsInput($options = []){
         $options = array_merge($options, ['model' => $this->model, 'attribute' => $this->attribute]);
         $this->parts['{input}'] = TagsInput::widget($options);
+        return $this;
+    }
+
+    /**
+     * @param array $items
+     * @param array $options
+     * @return $this
+     */
+    public function checkboxList($items, $options = [])
+    {
+        $options = array_merge($options, ['items'=>$items,'model' => $this->model, 'attribute' => $this->attribute]);
+        $this->parts['{input}'] = CheckboxList::widget($options);
+        return $this;
+    }
+
+    /**
+     * @param $items
+     * @param array $options
+     * @return $this
+     */
+    public function checkboxTree($items,$options = []){
+        $config = [
+            'items'=>$items,
+            'model' => $this->model,
+            'attribute' => $this->attribute,
+            'options' => $options
+        ];
+        $this->parts['{input}'] = CheckboxTree::widget($config);
         return $this;
     }
 }
