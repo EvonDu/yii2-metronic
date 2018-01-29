@@ -1,7 +1,7 @@
 <?php
-namespace evondu\metronic\field;
+namespace metronic\field;
 
-use evondu\metronic\widgets\TreeView;
+use metronic\widgets\TreeView;
 use yii\helpers\Html;
 
 /*

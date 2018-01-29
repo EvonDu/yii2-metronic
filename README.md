@@ -224,6 +224,14 @@ Switch滑动开关组件：
 ?>
 ```
 
+##### 2.7、editor
+Summernote富文本编辑器：
+```
+<?= $form->field($model, 'editAreas')->edit([
+    //Summernote的配置
+]) ?>
+```
+
 #### 3、Portlet（窗口）
 窗口部件，使用前需要先导入`evondu\metronic\widgets\Portlet`，使用例子：
 ```
@@ -405,4 +413,19 @@ echo 'Body portlet';
         [ "id" => "ajson4", "parent" => "ajson1", "text" => "Child 2" ,"data"=>"14"],
     ]
 ])?>
+```
+
+#### 10、SummernoteEditor（富文本）
+富文本，使用前需要导入`evondu\metronic\widgets\SummernoteEditor`，使用例子：
+```
+<?= SummernoteEditor::widget([
+    //可忽略，自动生成
+    'id' => $dataProvider,
+    //内嵌的表单元素textarea的name属性
+    'name' => $searchModel,
+    //初始值
+    'value' => "",
+    //Summernote的配置
+    'options'=>[]
+]); ?>
 ```

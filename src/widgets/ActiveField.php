@@ -5,6 +5,7 @@ use evondu\metronic\field\CheckboxList;
 use evondu\metronic\field\CheckboxTree;
 use evondu\metronic\field\DatePicker;
 use evondu\metronic\field\BootstrapSwitch;
+use evondu\metronic\field\Editor;
 use evondu\metronic\field\Select2;
 use evondu\metronic\field\TagsInput;
 use evondu\metronic\field\Other;
@@ -94,6 +95,16 @@ class ActiveField extends \yii\widgets\ActiveField {
             'options' => $options
         ];
         $this->parts['{input}'] = CheckboxTree::widget($config);
+        return $this;
+    }
+
+    public function editor($options = []){
+        $config = [
+            'model' => $this->model,
+            'attribute' => $this->attribute,
+            'options' => $options
+        ];
+        $this->parts['{input}'] = Editor::widget($config);
         return $this;
     }
 }
