@@ -26,7 +26,7 @@ class ActionColumn extends \yii\grid\ActionColumn {
                     'data-pjax' => '0',
                 ], $this->buttonOptions);
                 Html::addCssClass($options,"blue");
-                return Html::a(Yii::t('base', 'base_view')." <i class='glyphicon glyphicon-eye-open'></i>", $url, $options);
+                return Html::a(Yii::t('yii', 'View')." <i class='glyphicon glyphicon-eye-open'></i>", $url, $options);
             };
         }
         if (!isset($this->buttons['update'])) {
@@ -37,7 +37,7 @@ class ActionColumn extends \yii\grid\ActionColumn {
                     'data-pjax' => '0',
                 ], $this->buttonOptions);
                 Html::addCssClass($options,"green");
-                return Html::a(Yii::t('base', 'base_update')." <i class='glyphicon glyphicon-pencil'></i>", $url, $options);
+                return Html::a(Yii::t('yii', 'Update')." <i class='glyphicon glyphicon-pencil'></i>", $url, $options);
             };
         }
         if (!isset($this->buttons['delete'])) {

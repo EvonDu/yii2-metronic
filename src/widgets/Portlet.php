@@ -169,15 +169,21 @@ class Portlet extends MetronicWidget
 
     protected function renderActions(){
         //按钮组
-        $default = $this->getActionOptions();
         foreach($this->actions as $action){
             if(is_array($action)){
-                $options = $default;
-                $icon = Html::tag("i","",["class"=>$action["icon"]]);
-                $text = $action["text"];
-                if(empty($text))
-                    Html::addCssClass($options,"btn-icon-only");
-                $contents[] = Html::a("$icon\n$text", $action["url"], $options);
+                $button = Button::widget([
+                    'tag'=>Button::TAG_A,
+                    'iconOnly' => empty($action["text"])?true:false,
+                    'icon'=>isset($action["icon"])?$action["icon"]:'',
+                    'text'=>isset($action["text"])?$action["text"]:'',
+                    'size'=>Button::SIZE_SMALL,
+                    'circle'=>true,
+                    'color'=>isset($action["color"])?$action["color"]:Button::COLOR_DEFAULT,
+                    'url'=>isset($action["url"])?$action["url"]:'',
+                    'options'=>isset($action["options"])?$action["options"]:[],
+                ]);
+
+                $contents[] = $button;
             }
             else{
                 $contents[] = $action;
@@ -191,21 +197,6 @@ class Portlet extends MetronicWidget
 
         $actions = Html::tag("div",implode("\n",$contents),["class"=>"actions"]);
         return $actions;
-    }
-
-    protected function getActionOptions(){
-        $options = ['class' => 'btn btn-default'];
-
-        switch ($this->type){
-            case self::TYPE_LIGHT:
-                Html::addCssClass($options,"btn-circle");
-                break;
-            case self::TYPE_BOXED:
-                Html::addCssClass($options,"btn-sm");
-                break;
-        }
-
-        return $options;
     }
 }
 ?>

@@ -21,9 +21,10 @@ class MetronicWidget extends Widget
     const COLOR_PURPLE_MINT = "purple-sharp";
     const COLOR_GREY_MINT = "grey-mint";
     //size
-    const SIZE_SMALL = "small";
-    const SIZE_NORMAL = "normal";
-    const SIZE_LARGE = "large";
+    const SIZE_NORMAL = "norm";
+    const SIZE_SMALL = "sm";
+    const SIZE_LARGE = "lg";
+    const SIZE_EXTRA_SMALL = 'xs';
     //bootstrap class
     const CLASS_INFO = "info";
     const CLASS_DANGER = "danger";

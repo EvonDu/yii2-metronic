@@ -36,12 +36,24 @@ class BootstrapSwitch extends MetronicInputWidget
         //Load Assets
         SwitchAsset::register($this->view);
 
+        //Size
+        switch ($this->size){
+            case self::SIZE_LARGE:
+                $size = "large";
+                break;
+            case self::SIZE_SMALL:
+                $size = "small";
+                break;
+            default:
+                $size = "normal";
+        }
+
         //Options
         $options = [
             "class"=>"make-switch",
             "data-off-color"=>$this->offClass,
             "data-on-color"=>$this->onClass,
-            "data-size"=>$this->size,
+            "data-size"=>$size,
             "data-off-text"=>$this->offText,
             "data-on-text"=>$this->onText,
         ];
